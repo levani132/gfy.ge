@@ -6,12 +6,14 @@
 
 html, body{
 	font-family: alk-sanet;
+	font-size: 16px;
 	margin: 0;
 }
 
 .content{
 	max-width: 938px;
 	margin: auto;
+	margin-bottom: 10px;
 	box-shadow: 0 0 5px 2px;
 }
 
@@ -46,7 +48,6 @@ ul.lan{
 }
 
 ul.navigation{
-	max-width: 360px;
 	position: relative;
 }
 
@@ -67,7 +68,7 @@ li{
 
 main{
 	width: 100%;
-	min-height: 100px;
+	min-height: 300px;
 }
 
 footer{
@@ -77,3 +78,11 @@ footer{
 	position: relative;
 	bottom: 0;
 }
+
+.footerItems{
+	margin:auto;
+}
+
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
