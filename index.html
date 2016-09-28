@@ -5,17 +5,18 @@
 	<meta charset="utf-8"></meta>
 	<link rel="stylesheet" type="text/css" href="stylesheets/w3.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
 <body>
 	<header>
-		<table>
+		<table class="headerTable">
 			<tr>
 				<td>
 					<ul class="navigation">
-						<li class="inline">მთავარი</li>
-						<li class="inline">სერვისი</li>
-						<li class="inline">კონტაქტი</li>
-						<li class="inline">ჩვენს შესახებ</li>
+						<li class="inline"><a href="#">მთავარი</a></li>
+						<li class="inline"><a href="#">სერვისი</a></li>
+						<li class="inline"><a href="#">კონტაქტი</a></li>
+						<li class="inline"><a href="#">ჩვენს შესახებ</a></li>
 					</ul>
 				</td>
 				<td>
@@ -44,13 +45,20 @@
 				</div>
 			</div>
 			<script src="js/slideshow.js"></script>
-		<main></main>
+		<main>
+			
+		</main>
 		<footer>
-			<div class="footerItems">
-				<div class="socialNetwors">
-					
-				</div>
-			</div>
+			<table class="socialNetworks">
+				<tr>
+					<td><div class="socNet" id="fb"></div></td>
+					<td><div class="socNet" id="insta"></div></td>
+					<td><div class="socNet" id="twitter"></div></td>
+					<td><div class="socNet" id="mail"></div></td>
+				</tr>
+			</table>
+			<p class="footerText">2016 &copy; this.com | All rights reserved</p>
+			<script src="js/footer.js"></script>
 		</footer>
 	</div>
 </body>

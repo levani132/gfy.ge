@@ -4,6 +4,14 @@
 	font-weight:401;
 }
 
+a{
+	text-decoration: none;
+}
+
+a:visited{
+	text-decoration: none;
+}
+
 html, body{
 	font-family: alk-sanet;
 	font-size: 16px;
@@ -13,9 +21,7 @@ html, body{
 .content{
 	width: 100%;
 	margin: auto;
-	margin-bottom: 10px;
 	margin-top: 60px;
-	box-shadow: 0 0 5px 2px;
 }
 
 header{
@@ -27,7 +33,7 @@ header{
 	z-index:20;
 }
 
-table{
+table.headerTable{
 	position:absolute;
 	right:0;
 }
@@ -76,10 +82,28 @@ footer{
 	height: 120px;
 	position: relative;
 	bottom: 0;
+	text-align: center;
 }
 
-.footerItems{
+.socNet{
+	border-radius: 10%;
+	background-color: white;
+	width: 50px;
+	height: 50px;
+}
+
+.socialNetworks{
+	position:relative;
 	margin:auto;
+	top: 10px;
+}
+
+.footerText{
+	color: white;
+}
+
+li.inline:hover{
+	text-decoration: underline;
 }
 
 .mySlides {display:none}
