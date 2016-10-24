@@ -1,7 +1,6 @@
 <?php
-$lang_id = $_GET['lan'];
-if(isset($lang_id)){
-switch ($lang_id) {
+if(isset($_GET['lan'])){
+switch ($_GET['lan']) {
 case 0:include ("lan/geo.php");
     break;
 case 1:include ("lan/geo.php");
