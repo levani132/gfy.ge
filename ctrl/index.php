@@ -1,7 +1,12 @@
 <?php
+	include "mysqlConnect.php";
+	if(!defined('SESSION_TIMEOUT')) define('SESSION_TIMEOUT', 1800);
+
 	if(!isset($_SESSION)) session_start();
-	if(array_key_exists('logout', $_GET)) session_unset();
+
+	if(array_key_exists('logout', $_GET) || (array_key_exists('time', $_SESSION) && time() - $_SESSION['time'] > SESSION_TIMEOUT)) session_unset();
 	if(array_key_exists('started', $_SESSION)){
+		$_SESSION['time'] == time();
 		include "newArticle.php";
 	}
 	else{
