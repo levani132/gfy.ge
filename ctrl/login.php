@@ -15,10 +15,10 @@
 	if(mysqli_num_rows($password) && $result["Password"] == md5($_POST['password'])){
 		$_SESSION['started'] = 1;
 		$_SESSION['time'] = time();
-		header('Location: http://$uri/ctrl/');
+		header('Location: http://'.$uri.'/ctrl/');
 	}
 	else{
 		$err = "Please type correct username/password.";
-		header('Location: http://$uri/ctrl/?err=1');
+		header('Location: http://'.$uri.'/ctrl/?err=1');
 	}
 ?>
