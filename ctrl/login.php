@@ -1,7 +1,7 @@
 <?php 
+	$error = false;
 	if(!isset($_POST['username']) || !isset($_POST['password'])){
-		$err = "Please type both username and password.";
-		include "index.php";
+		$error = true;
 	}
 
 	$user = mysqli_real_escape_string($conn, $_POST["username"]);
@@ -18,6 +18,7 @@
 	}
 	else{
 		$err = "Please type correct username/password.";
-		include "index.php";
+		$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+		header('Location: http://$uri/ctrl/?err=1');
 	}
 ?>

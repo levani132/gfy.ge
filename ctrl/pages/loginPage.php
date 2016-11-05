@@ -9,7 +9,7 @@
   
 <div class="login-page">
   <div class="form">
-    <p class="error"><?php if(array_key_exists('err', $GLOBALS)) echo $err;  ?></p>
+    <p class="error"><?php if(array_key_exists('errors', $GLOBALS) && isset($_POST["submit`"])) echo $errors[$_GET['err']];  ?></p>
     <form class="login-form" method="post" action="?subm">
       <input type="text" placeholder="username" name="username"/>
       <input type="password" placeholder="password" name="password"/>

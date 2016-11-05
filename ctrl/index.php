@@ -1,6 +1,7 @@
 <?php
 	include "mysqlConnect.php";
 	if(!defined('SESSION_TIMEOUT')) define('SESSION_TIMEOUT', 1800);
+	if(isset($_GET["err"])) include "errors.php";
 
 	if(!isset($_SESSION)) session_start();
 
