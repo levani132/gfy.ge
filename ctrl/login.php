@@ -10,7 +10,7 @@
 	$password = mysqli_query($conn, "SELECT `Password` FROM `admins` WHERE `Username` = '".$_POST['username']."'");	
 	$result = mysqli_fetch_assoc($password);
 
-	$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+	$uri   = rtrim($_SERVER['PHP_SELF'], '/\\');
 
 	if(mysqli_num_rows($password) && $result["Password"] == md5($_POST['password'])){
 		$_SESSION['started'] = 1;
