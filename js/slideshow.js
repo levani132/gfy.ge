@@ -22,4 +22,5 @@ $(".slideShow").css("width", window.innerWidth);
 $(window).resize(function(){
   $(".slideShow").css("height", window.innerHeight);
   $(".slideShow").css("width", window.innerWidth);
+  Console.log("1");
 });
