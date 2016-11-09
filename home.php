@@ -14,7 +14,11 @@
 </div> -->
 <div class="slideShow">
 <?php 
-	$sql = mysqli_query($db, "SELECT * FROM slider_images ORDER BY sort ASC");
+	if($sql = mysqli_query($db, "SELECT * FROM slider_images ORDER BY sort ASC")){
+		echo "vaaaa";
+	}else{
+		echo "noooo";
+	}
 	while($row = mysqli_fetch_array($sql))
 	{
 		$link = "img/slideshow/".$row["image"];
