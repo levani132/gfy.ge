@@ -25,8 +25,8 @@
 <?php 
 	} 
 ?>
-<a class="lefArrow" onclick="plusDivs(-1)">&#10094;</a>
-<a class="rightArrow" onclick="plusDivs(+1)">&#10095;</a>
+<div class="lefArrow" onclick="plusDivs(-1)">&#10094;</div>
+<div class="rightArrow" onclick="plusDivs(+1)">&#10095;</div>
 </div>
 
 <script src="js/slideshow.js"></script>
