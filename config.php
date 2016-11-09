@@ -10,7 +10,7 @@
 	$db = mysqli_connect($servername,$username,$password);
 	mysqli_select_db($db,$dbname) or die (mysqli_error($db));
 	mysqli_query($db,"SET NAMES '".$encode."'");
-	echo "<p>alsjdjnskjlfndskljfnkjdslfnndslf</p>"
+	echo "<p>alsjdjnskjlfndskljfnkjdslfnndslf</p>";
 
 	$uri   = rtrim($_SERVER['SERVER_NAME'], '/\\');
 	$base_url = 'http://'.$uri.'/';
