@@ -22,11 +22,13 @@
 
 .leftArrow{
 	float:left;
+	line-height: 100%;
 	margin: auto 0;
 }
 
 .rightArrow{
 	float:right;
+	line-height: 100%;
 	margin: auto 0;
 }
 
