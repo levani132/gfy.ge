@@ -19,7 +19,7 @@
 	{
 		$link = "img/slideshow/".$row["image"];
 ?>
-
+		<p><?=$link; ?></p>
 		<div class="mySlides" style="background-image: url('<?=$base_url.$link;?>')"></div>
 
 <?php 
