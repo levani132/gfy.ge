@@ -10,7 +10,10 @@
 	$db = mysqli_connect($servername,$username,$password);
 	mysqli_select_db($db,$dbname) or die (mysqli_error($db));
 	mysqli_query($db,"SET NAMES '".$encode."'");
-	echo "<p>alsjdjnskjlfndskljfnkjdslfnndslf</p>";
+	$sql = mysqli_query($db, "SELECT * FROM heroku_c75925a870861fd.slider_images ORDER BY sort ASC");
+	$row = mysqli_fetch_array($sql);
+	$link = "img/slideshow/".$row["image"];
+	echo "<p><?=$link; ?></p>";
 
 	$uri   = rtrim($_SERVER['SERVER_NAME'], '/\\');
 	$base_url = 'http://'.$uri.'/';
