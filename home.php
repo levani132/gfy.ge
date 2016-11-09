@@ -25,6 +25,7 @@
 <?php 
 	} 
 ?>
+<div class="mySlides" style="background-image: url('<?=$base_url.$link;?>')"></div>
 <div class="leftArrow" onclick="plusDivs(-1)">&#10094;</div>
 <div class="rightArrow" onclick="plusDivs(+1)">&#10095;</div>
 </div>
