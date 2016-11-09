@@ -15,7 +15,6 @@
 <div class="slideShow">
 <?php 
 	$sql = mysqli_execute($db, "SELECT * FROM slider_images ORDER BY sort ASC");
-	echo "<p>".$sql."</p>";
 	while($row = mysqli_fetch_array($sql))
 	{
 		$link = "img/slideshow/".$row["image"];
