@@ -14,4 +14,6 @@
 
 	$uri   = rtrim($_SERVER['SERVER_NAME'], '/\\');
 	$base_url = 'http://'.$uri.'/';
+
+	global $db;
 ?>
