@@ -25,7 +25,7 @@
 <?php 
 	} 
 ?>
-<div class="lefArrow" onclick="plusDivs(-1)">&#10094;</div>
+<div class="leftArrow" onclick="plusDivs(-1)">&#10094;</div>
 <div class="rightArrow" onclick="plusDivs(+1)">&#10095;</div>
 </div>
 
