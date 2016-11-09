@@ -16,4 +16,5 @@
 	$base_url = 'http://'.$uri.'/';
 
 	global $db;
+	global $base_url;
 ?>

@@ -14,7 +14,7 @@
 </div> -->
 <div class="slideShow">
 <?php 
-	$sql = mysqli_query($db, "SELECT * FROM slider_images ORDER BY sort ASC") or die (mysqli_error($db));
+	$sql = mysqli_query($db, "SELECT * FROM heroku_c75925a870861fd.slider_images ORDER BY sort ASC") or die (mysqli_error($db));
 	while($row = mysqli_fetch_array($sql))
 	{
 		$link = "img/slideshow/".$row["image"];
