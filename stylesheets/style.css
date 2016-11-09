@@ -21,7 +21,7 @@
 }
 
 .leftArrow{
-	position:relative;
+	position:absolute;
 	display: inline;
 	float:left;
 	top:50%;
@@ -30,7 +30,7 @@
 }
 
 .rightArrow{
-	position:relative;
+	position:absolute;
 	display: inline;
 	float:right;
 	right: 12px;
