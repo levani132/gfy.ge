@@ -21,15 +21,20 @@
 }
 
 .leftArrow{
+	position:relative;
 	display: inline;
 	float:left;
-	line-height: 100%;
+	top:50%;
+	transform: translateY(-50%);
 }
 
 .rightArrow{
+	position:relative;
 	display: inline;
 	float:right;
-	line-height: 100%;
+	right: 8px;
+	top:50%;
+	transform: translateY(-50%);
 }
 
 body{
