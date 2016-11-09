@@ -1,3 +1,4 @@
+<?php include "config.php" ?>
 <?php include "changeLan.php" ?>
 <?php include "php/functions.php" ?>
 <?php $lan = getLan(); ?>
