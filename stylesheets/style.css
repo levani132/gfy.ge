@@ -21,15 +21,15 @@
 }
 
 .leftArrow{
+	display: inline;
 	float:left;
 	line-height: 100%;
-	margin: auto 0;
 }
 
 .rightArrow{
+	display: inline;
 	float:right;
 	line-height: 100%;
-	margin: auto 0;
 }
 
 body{
