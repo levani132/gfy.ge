@@ -8,6 +8,10 @@
 	--color1: #2E2E3A;
 }
 
+.slideShow{
+	position:relative;
+}
+
 .mySlides{
 	width:100%;
 	height:100%;
