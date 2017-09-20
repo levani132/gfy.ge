@@ -10,12 +10,24 @@
 </head>
 <body>
     <div class="app">
-        <input type="text">
+        <div class="messages">
+            <div class="message" v-for="message in messages">
+                {{message.user}} ({{message.time}}): {{message.text}}
+                <br>
+            </div>
+        </div>
+        <form action="" onsubmit="app.sendMessage(); return false;">
+            <input type="text" class="messageInput">
+            <input type="submit" value="send">
+        </form>
     </div>
 
     <script>
         var app = new Vue({
             el: ".app",
+            create(){
+                wsConnect();
+            },
             data:{
                 messages:[
                     {
@@ -28,11 +40,26 @@
             },
             methods: {
                 sendMessage(){
-
+                    var message = document.querySelector(".messageInput").value;
+                    ws.send(message);
+                },
+                onMessage(data){
+                    messages.push(data);
+                },
+                onError(error){
+                    console.error("vaa erroria");
+                },
+                onClose(){
+                    console.error("vaa daixura");
+                },
+                wsConnect(){
+                    var wsHost = "chatwebsockets.herokuapp.com";
+                    var wsPort = "443";
+                    this.ws = new WebSocket(`ws://${wsHost}:${wsPort}`);
+                    this.ws.onmessage = this.onMessage;
+                    this.ws.onerror = this.onError;
+                    this.ws.onclose = this.onClose;
                 }
-            },
-            create(){
-                this.ws = new WebSocket("")
             }
         });
     </script>
