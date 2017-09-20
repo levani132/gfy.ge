@@ -9,14 +9,14 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="app">
+    <div id="app">
         <div class="messages">
             <div class="message" v-for="message in messages">
                 {{message.user}} ({{message.time}}): {{message.text}}
                 <br>
             </div>
         </div>
-        <form action="" onsubmit="app.sendMessage(); return false;">
+        <form action="" @submit.prevent="app.sendMessage">
             <input type="text" class="messageInput">
             <input type="submit" value="send">
         </form>
@@ -24,9 +24,9 @@
 
     <script>
         var app = new Vue({
-            el: ".app",
-            create(){
-                wsConnect();
+            el: "#app",
+            created(){
+                this.wsConnect();
             },
             data:{
                 messages:[
@@ -41,7 +41,7 @@
             methods: {
                 sendMessage(){
                     var message = document.querySelector(".messageInput").value;
-                    ws.send(message);
+                    this.ws.send(message);
                 },
                 onMessage(data){
                     messages.push(data);
