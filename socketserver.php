@@ -2,7 +2,9 @@
 require __DIR__ . '/vendor/autoload.php';
 use Ratchet\MessageComponentInterface;
 use Ratchet\ConnectionInterface;
-
+use Ratchet\Server\IoServer;
+use Ratchet\Http\HttpServer;
+use Ratchet\WebSocket\WsServer;
 
 class Chat implements MessageComponentInterface {
 
@@ -43,3 +45,14 @@ class Chat implements MessageComponentInterface {
         }
     }
 }
+
+$server = IoServer::factory(
+    new HttpServer(
+        new WsServer(
+            new Chat()
+        )
+    ),
+    443
+);
+
+$server->run();
