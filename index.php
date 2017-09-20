@@ -54,7 +54,7 @@
                 },
                 wsConnect(){
                     var wsHost = "chatwebsockets.herokuapp.com";
-                    var wsPort = "443";
+                    var wsPort = "8080";
                     this.ws = new WebSocket(`ws://${wsHost}:${wsPort}`);
                     this.ws.onmessage = this.onMessage;
                     this.ws.onerror = this.onError;
