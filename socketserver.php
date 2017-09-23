@@ -12,6 +12,7 @@ class Chat implements MessageComponentInterface {
 
     public function __construct() {
         $this->clients = new \SplObjectStorage;
+        echo "sheiqmna";
     }
 
     public function onOpen(ConnectionInterface $conn) {
